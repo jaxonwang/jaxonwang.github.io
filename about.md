@@ -5,7 +5,7 @@ title: About
 
 # Me
 
-I am a first-year master student in the Graduate School of Frontier Science, University of Tokyo. I received my bachelor's degree at the College of Software Engineering, Southeast University, Nanjing, China.
+My name is JX Wang, a first-year master student in the Graduate School of Frontier Science, University of Tokyo. I received my bachelor's degree at the College of Software Engineering, Southeast University, Nanjing, China.
 
 Before coming to Japan, I worked in the industry for 2 years focusing on SaaS cloud platforms and Big-data frameworks. Now my research domains are Parallel Computing and Distributed Systems. 
 
@@ -21,7 +21,6 @@ Domain knowledge: Distributed system, Parallel framework, Cloud, Big-data, Conta
 
 Platform and tools: Linux, OpenStack, Hadoop MapReduce, Yarn, Spark, Kubernetes, Docker
 
-# Things I love
+# Things I like
 
-PC games, Animations, Playing the Classical Guitar, Cats
-
+Cats, PC games, Animations, Playing the Classical Guitar, Religions and Philosophy
