@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Ukkoen算法构建后缀树实现"
+date: 2020-08-21 20:15:37 +0900
+categories:  Programming
+tags: algorithms
+---
+
+花了两天看懂并且实现了后缀树线性时间内构建...
+
+网络上正确的后缀树实现好像不是很多. 自己撸了一个
+
+悲催的是, 后缀树这个东西似乎很少在实践中使用, 因为太占用内存了 还有就是locality太差, suffix link 一跳可能就page fault
+
+取而代之的是空间占用更小, 同样复杂度, 更好实现, 更好的data locality, 的suffix array....
+
+好多网上的实现都有bug, 不过至少我的版本已经验证了几十万长度的字符串, 看上去挺正确的...
+
+<https://github.com/jaxonwang/suffixtree/blob/master/main.cc>
+
+思路就是
+`Algorithms on Strings, Trees, and Sequences: Computer Science and Computational Biology`
+里的方式.
