@@ -67,3 +67,8 @@ void ServerConnectionWithHeartbeat::when_timeout(const std::error_code &ec) {
  But seems the connection is not "closed" immediately: Log 6 shows that the server received the heartbeat very soon after the timer is canceled, and invoke a callback to restart the timer. Then we see the timer timeout again, trigger a timeout event and the server stops again.
 
 No time to examine whether there could still be a reading event in kqueue after close is called in MacOS, but just keep that case down here.
+
+Update:
+OK... will fix that later
+[https://stackoverflow.com/questions/20222079/epoll-wait-returning-events-on-closed-file-descriptor](https://stackoverflow.com/questions/20222079/epoll-wait-returning-events-on-closed-file-descriptor)
+https://stackoverflow.com/questions/20222079/epoll-wait-returning-events-on-closed-file-descriptor
