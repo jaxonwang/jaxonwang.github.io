@@ -6,8 +6,6 @@ categories: Programming
 tags: parallel
 ---
 
-# Parallel Cholesky decomposition implemation
-
 ## Data partition
 
 Here, the full matrix is partitioned into smaller sub-matrixes, and bellow is an example of partition A in to 9 sub-matrixes:
@@ -53,6 +51,7 @@ A = L L^T = \begin{pmatrix}
 $$
 
 And
+
 $$L_{jj} = chol( A _{ij} ) $$$$
 L_{ij}=(A_{ij}  - \sum_{k=1}^{j-1}L_{ik}L_{jk}^T)L_{jj}^{-T}
 $$
@@ -65,13 +64,16 @@ There are two variants of block-based parallel Cholesky decomposition algorithm:
 
 ### Right-looking algorithm
 Two algorithm proceeds columns by columns, and the computing for column $j$ will start after the column $j-1$ finishes.
+
 $$
 A = \begin{pmatrix} 
-{ A _ { 11 } } &  & \\ 
-{ A _ { 21 } } & { A _ { 22 } } &\\
-{ A _ { 31 } } & { A _ { 32 } } & { A _ { 33 } }
+{ A _ { 11 } } &|&  & \\ 
+--&&--&--\\
+{ A _ { 21 } } &|& { A _ { 22 } } &\\
+{ A _ { 31 } } &|& { A _ { 32 } } & { A _ { 33 } }
 \end{pmatrix}
 $$
+
 Suppose row 1 $(A_{11} , A_{22}, A_{33})$ has been computed, then
 
 $$
@@ -89,6 +91,16 @@ The right-looking algorithm can be described as following:
 We can see that communication occurs at the innermost loop. The inner loop computation of matrix multiplication and matrix subtract is paralleled on different processors.
 
 ## Left-looking algorithm
+Similar to the right-looking:
+
+$$
+A = \begin{pmatrix} 
+{ A _ { 11 } } &|&  & \\ 
+--&&--&--\\
+{ A _ { 21 } } &|& { A _ { 22 } } &\\
+{ A _ { 31 } } &|& { A _ { 32 } } & { A _ { 33 } }
+\end{pmatrix}
+$$
 
 Suppose row 1 $(A_{11} , A_{22}, A_{33})$ has been computed, then
 $$
