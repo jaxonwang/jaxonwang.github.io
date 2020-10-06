@@ -9,7 +9,13 @@ My name is JX Wang, a first-year master student in the Graduate School of Fronti
 
 Before coming to Japan, I worked in the industry for 2 years focusing on SaaS cloud platforms and Big-data frameworks. Now my research domains are Parallel Computing and Distributed Systems. 
 
-Programming is satisfying to me since the code is another format of math. Our universe is defined by math, so it can be expressed by code. 
+Programming is satisfying to me since the code is another format of math:
+
+> Algorithms == Definitions and Running algorithms == Deduction.
+
+Our universe is defined by math, so it can be expressed by code:
+
+> 道生集合, 集合生λ, λ生万物
 
 Currently, I write Python and C++ most. I love Python for simplicity and C++ for performance. I am also a big fan of functional programming. Erlang and Haskell are great!
 
